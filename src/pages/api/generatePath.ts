@@ -3,9 +3,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 
+const openaiApiKey = process.env.OPENAI_API_KEY;
+
 const openai = new OpenAI({
-  apiKey:
-    "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",
+  apiKey: openaiApiKey,
 });
 
 export default async function handler(
